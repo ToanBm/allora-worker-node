@@ -1,16 +1,16 @@
 # Update Allora Worker Node
 ### 1. Stop your worker:
+#### - Worker1:
 ```Bash
-cd worker1-10m
+cd worker1-10m && docker compose down
 ```
+#### - Worker2:
 ```Bash
-cd worker2-24h
+cd worker2-24h && docker compose down
 ```
+#### - Worker3:
 ```Bash
-cd worker3-20m
-```
-```Bash
-docker compose down
+cd worker3-20m && docker compose down
 ```
 ### 2. Edit file `docker-compose.yml`
 ```Bash
