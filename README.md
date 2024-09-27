@@ -1,3 +1,47 @@
+# Install Allora Worker Node
+### 1. Stop and remove your worker:
+#### - Worker3:
+```Bash
+cd worker3-20m && docker compose down
+```
+```Bash
+cd
+rm -rf worker3-20m
+```
+### 2. Clone repository:
+```Bash
+cd
+git clone https://github.com/nhunamit/basic-coin-prediction-node.git
+```
+```Bash
+mv basic-coin-prediction-node worker3-20m
+cd worker3-20m
+```
+```Bash
+git branch -a
+git checkout worker3-20m
+```
+### 3. Edit file `nano config.json`
+```Bash
+nano config.json
+```
+Edit `"addressRestoreMnemonic"` change `just clap slim ...` by your mnemonic.
+(Ctrl + X, Y and Enter will do to save)
+### 4. Configuration:
+```Bash
+./init.config
+```
+### 5. Run:
+```Bash
+docker compose up -d
+```
+```Bash
+docker compose logs -f
+```
+
+## Done!
+---------------------------------------------------------------------------------------------
+
 # Update Allora Worker Node
 ### 1. Stop your worker:
 #### - Worker1:
